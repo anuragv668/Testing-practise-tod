@@ -1,5 +1,6 @@
 const functions = require('./functions');
 
-test("exports", () => {
-  expect().toBe();;
+test("capitalize", () => {
+  expect(functions.capitalize("world")).toBe("World");
+  expect(functions.capitalize("hello")).toBe("Hello");
 });
