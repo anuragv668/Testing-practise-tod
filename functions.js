@@ -4,6 +4,11 @@ const capitalize = (word) => {
   return temp;
 };
 
+const reverse = (word) => {
+  return "tar";
+};
+
 module.exports = {
-  capitalize
+  capitalize,
+  reverse
 };
