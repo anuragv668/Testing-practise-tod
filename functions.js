@@ -5,7 +5,11 @@ const capitalize = (word) => {
 };
 
 const reverse = (word) => {
-  return "tar";
+  let temp ="";
+  for(let i = word.length; i >= 0; i--) {
+    temp += word.charAt(i);
+  }
+  return temp;
 };
 
 module.exports = {
