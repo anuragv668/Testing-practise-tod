@@ -7,4 +7,6 @@ test("capitalize", () => {
 
 test("reverse", () => {
   expect(functions.reverse("rat")).toBe("tar");
+  expect(functions.reverse("cat")).toBe("tac");
+  expect(functions.reverse("hammer")).toBe("remmah");
 });
