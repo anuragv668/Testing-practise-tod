@@ -24,3 +24,17 @@ test("caesarCipher", () => {
   expect(functions.caesarCipher('HeLLo', 3)).toBe('KhOOr');
   expect(functions.caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
+
+test("analyzeArray", () => {
+  expect(functions.analyzeArray([1,8,3,4,2,6]).average).toBe(4);
+  expect(functions.analyzeArray([1,8,3,4,2,6]).min).toBe(1);
+  expect(functions.analyzeArray([1,8,3,4,2,6]).max).toBe(8);
+  expect(functions.analyzeArray([1,8,3,4,2,6]).length).toBe(6);
+  expect(functions.analyzeArray([1,8,3,4,2,6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+  });
+
+});

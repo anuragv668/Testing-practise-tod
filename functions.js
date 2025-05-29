@@ -43,9 +43,39 @@ const caesarCipher = (str, num) => {
     .join('');
 };
 
+const analyzeArray = (array) => {
+  let average = array.reduce((sum, current) => {
+    return sum + current;
+  }, 0) / array.length;
+
+  let min = array.reduce((previous, current) => {
+    if (current > previous) {
+      return previous;
+    } 
+    return current;
+  }, array[0]);
+
+  let max = array.reduce((previous, current) => {
+    if (current < previous) {
+      return previous;
+    } 
+    return current;
+  }, array[0]);
+
+  let length = array.length;
+
+  return {
+    average,
+    min,
+    max,
+    length
+  }
+}
+
 module.exports = {
   capitalize,
   reverse,
   calculator,
-  caesarCipher
+  caesarCipher,
+  analyzeArray
 };
