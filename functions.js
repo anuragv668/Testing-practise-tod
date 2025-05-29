@@ -27,8 +27,25 @@ class calculator {
   }
 }
 
+const caesarCipher = (str, num) => { 
+  return str.split('')
+    .map((item) => {
+      if (item >= 'A' && item <= 'Z') {
+        let base = 'A'.charCodeAt(0);
+        return String.fromCharCode((item.charCodeAt(0) - base + num) % 26 + base);
+      } else if (item >= 'a' && item <= 'z') {
+        let base = 'a'.charCodeAt(0);
+        return String.fromCharCode((item.charCodeAt(0) - base + num) % 26 + base);
+      } else {
+        return item;
+      }
+    })
+    .join('');
+};
+
 module.exports = {
   capitalize,
   reverse,
-  calculator
+  calculator,
+  caesarCipher
 };

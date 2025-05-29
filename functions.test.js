@@ -18,3 +18,9 @@ test("calculator", () => {
   expect(calculator.divide(10, 2)).toBe(5);
   expect(calculator.multiply(10, 2)).toBe(20);
 });
+
+test("caesarCipher", () => {
+  expect(functions.caesarCipher('xyz', 3)).toBe('abc');
+  expect(functions.caesarCipher('HeLLo', 3)).toBe('KhOOr');
+  expect(functions.caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
