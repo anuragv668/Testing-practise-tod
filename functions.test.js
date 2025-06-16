@@ -1,4 +1,4 @@
-const functions = require('./functions');
+const functions = require('./code/functions');
 const calculator = new functions.calculator;
 
 test("capitalize", () => {
